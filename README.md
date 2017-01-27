@@ -1,2 +1,2 @@
-# quenix.github.io
-# My blog.
+# http://quenix.github.io
+# Leonardo Vasques - Blog.
