@@ -1,9 +1,9 @@
 {
-    "name": "clean-blog",
-    "title": "Clean Blog",
+    "name": "@quenix",
+    "title": "QUENIX,
     "version": "1.0.0",
-    "homepage": "http://startbootstrap.com",
-    "author": "Start Bootstrap",
+    "homepage": "http://quenix.github.io",
+    "author": "Leonardo Vasques @quenix",
     "license": "MIT",
     "devDependencies": {
         "grunt": "~0.4.5",
@@ -14,6 +14,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll.git"
+        "url": "https://github.com/Quenix/quenix.github.io.git"
     }
 }

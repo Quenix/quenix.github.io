@@ -1,15 +1,15 @@
 # Site settings
-title: Clean Blog
+title: Quenix
 header-img: img/home-bg.jpg
 email: quenixserra@gmail.com
 copyright_name: Quenix
-description: "Write your site description here. It will be used as your sites meta description as well!"
+description: "Blog sobre programação, Tecnologia e Games."
 baseurl: ""
 url: "http://quenix.github.io"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  StartBootstrap
-email_username:  your-email@yourdomain.com
+twitter_username: vasqueslf
+github_username:  quenix
+facebook_username:  felipe.vasques.1441
+email_username:  quenixserra@gmail.com
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
