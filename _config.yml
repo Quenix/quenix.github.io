@@ -2,9 +2,9 @@
 title: Clean Blog
 header-img: img/home-bg.jpg
 email: quenixserra@gmail.com
-copyright_name: Your/Project/Corporate Name
+copyright_name: Quenix
 description: "Write your site description here. It will be used as your sites meta description as well!"
-baseurl: ""
+baseurl: "http://quenix.github.io"
 url: "http://quenix.github.io"
 twitter_username: SBootstrap
 github_username:  davidtmiller
