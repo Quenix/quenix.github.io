@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Registrar Clientes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../base/dsi.css" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/">
+        <img class="brand" src="../base/img/logo.png">
+      </a>
+      <button style="background-color: white !important;" class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mt-2">
+            <a class="nav-link js-scroll-trigger" href="/#services">Serviços</a>
+          </li>
+          <li class="nav-item mt-2">
+            <a class="nav-link js-scroll-trigger" href="/#about">Nosso time</a>
+          </li>
+          <li class="nav-item mt-2">
+            <a class="nav-link js-scroll-trigger" href="/#contact">Fale conosco</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="../login/login.html"><button
+                class="btn btn-dark">Login</button></a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="container mt-5 mb-5">
+    <div class="">
+      <h1 class="center">Registrar</h1>
+
+      <div class="form-group">
+        <label class="" for="exampleFormControlInput1">Tipo de registro</label>
+        <div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="radioPf" name="tipoCliente" value="PF" class="custom-control-input">
+            <label class="custom-control-label" for="radioPf">Pessoa física</label>
+          </div>
+
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="radioPj" name="tipoCliente" value="PJ" class="custom-control-input">
+            <label class="custom-control-label" for="radioPj">Pessoa jurídica</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Nome completo</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome completo">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Documento válido (CPF)</label>
+        <input type="text" class="form-control" id="documento" placeholder="Ex: 430.739.028-82">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="email@exemplo.com.br">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Senha</label>
+        <input type="password" class="form-control" id="senha" placeholder="***************">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Confirme a sua senha</label>
+        <input type="password" class="form-control" id="confirmaSenha" placeholder="***************">
+      </div>
+
+      <button onclick="registrar()" class="btn btn-danger">Registrar</button>
+
+    </div>
+
+  </section>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark footer">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Team FOX 🦊 2020 </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- Levando em conta boas práticas e performance, estamos importando nossos scripts no fim do Body -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Javascript customizado para efeito de scroll -->
+  <script src="../vendor/js/scrolling-nav.js"></script>
+
+      <!-- Levando em conta boas práticas e performance, estamos importando nossos scripts no fim do Body -->
+      <script src="../base/dsi.js"></script>
+      <script src="registrar.js"></script>
+</body>
+
+</html>

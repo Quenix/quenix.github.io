@@ -1,136 +1,265 @@
-﻿<!DOCTYPE html>
-<html manifest="offline.appcache">
+<!DOCTYPE html>
+<html lang="pt">
+
 <head>
-    <meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>MetroidVania</title>
-	
-	<!-- Standardised web app manifest -->
-	<link rel="manifest" href="appmanifest.json" />
-	
-	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
-	<meta name="HandheldFriendly" content="true" />
-	
-	<!-- Chrome for Android web app tags -->
-	<meta name="mobile-web-app-capable" content="yes" />
-	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
 
-    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
-	<style type="text/css">
-		* {
-			padding: 0;
-			margin: 0;
-		}
-		html, body {
-			background: #000;
-			color: #fff;
-			overflow: hidden;
-			touch-action: none;
-			-ms-touch-action: none;
-		}
-		canvas {
-			touch-action-delay: none;
-			touch-action: none;
-			-ms-touch-action: none;
-		}
-    </style>
-	
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-</head> 
- 
-<body> 
-	<div id="fb-root"></div>
-	
-	<script>
-	// Issue a warning if trying to preview an exported project on disk.
-	(function(){
-		// Check for running exported on file protocol
-		if (window.location.protocol.substr(0, 4) === "file")
-		{
-			alert("Exported games won't work until you upload them. (When running on the file:/// protocol, browsers block many features from working for security reasons.)");
-		}
-	})();
-	</script>
-	
-	<!-- The canvas must be inside a div called c2canvasdiv -->
-	<div id="c2canvasdiv">
-	
-		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
-		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
-		<canvas id="c2canvas" width="640" height="480">
-			<!-- This text is displayed if the visitor's browser does not support HTML5.
-			You can change it, but it is a good idea to link to a description of a browser
-			and provide some links to download some popular HTML5-compatible browsers. -->
-			<h1>Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
-			<br/><br/><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br/>
-			<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
-			<a href="http://www.google.com/chrome/">Google Chrome</a><br/>
-			<a href="http://www.apple.com/safari/download/">Apple Safari</a></h1>
-		</canvas>
-		
-	</div>
-	
-	<!-- Pages load faster with scripts at the bottom -->
-	
-	<!-- Construct 2 exported games require jQuery. -->
-	<script src="jquery-2.1.1.min.js"></script>
+  <title>FOXCOIN - COMPRA E VENDA DE CRIPTOMOEDAS</title>
 
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-	
-    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
-    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
-	<script src="c2runtime.js"></script>
+  <!-- Custom styles for this template -->
+  <link href="vendor/css/scrolling-nav.css" rel="stylesheet">
+  <link href="base/dsi.css" rel="stylesheet">
+</head>
 
-    <script>
-		// Start the Construct 2 project running on window load.
-		jQuery(document).ready(function ()
-		{			
-			// Create new runtime using the c2canvas
-			cr_createRuntime("c2canvas");
-		});
-		
-		// Pause and resume on page becoming visible/invisible
-		function onVisibilityChanged() {
-			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
-				cr_setSuspended(true);
-			else
-				cr_setSuspended(false);
-		};
-		
-		document.addEventListener("visibilitychange", onVisibilityChanged, false);
-		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
-		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
-		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
-		
-		function OnRegisterSWError(e)
-		{
-			console.warn("Failed to register service worker: ", e);
-		};
-		
-		// Runtime calls this global method when ready to start caching (i.e. after startup).
-		// This registers the service worker which caches resources for offline support.
-		window.C2_RegisterSW = function C2_RegisterSW()
-		{
-			if (!navigator.serviceWorker)
-				return;		// no SW support, ignore call
-			
-			try {
-				navigator.serviceWorker.register("sw.js", { scope: "./" })
-				.then(function (reg)
-				{
-					console.log("Registered service worker on " + reg.scope);
-				})
-				.catch(OnRegisterSWError);
-			}
-			catch (e)
-			{
-				OnRegisterSWError(e);
-			}
-		};
-    </script>
-</body> 
-</html> 
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/">
+        <img class="brand" src="base/img/logo.png">
+      </a>
+      <button style="background-color: white !important;" class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mt-2">
+            <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
+          </li>
+          <li class="nav-item mt-2">
+            <a class="nav-link js-scroll-trigger" href="#about">Nosso time</a>
+          </li>
+          <li class="nav-item mt-2">
+            <a class="nav-link js-scroll-trigger" href="#contact">Fale conosco</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="login/login.html"><button
+                class="btn btn-dark">Login</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="registrar/registrar.html"><button
+                class="btn btn-danger">Registrar</button></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-white" style="background-color: orangered; opacity: .8;">
+    <div class="container text-center">
+      <h1>Comprar e vender
+        Bitcoin é na Foxcoin! </h1>
+      <p class="lead">Desde 2020 (mais precisamente semana passada) no mercado.
+      </p>
+      <div class="d-flex justify-content-center">
+        <a href="registrar/registrar.html"><button class="btn btn-light mr-10">Comece agora! 🔥</button></a>
+      </div>
+
+    </div>
+  </header>
+
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Serviços</h2>
+          <p class="lead">A Foxcoin é uma corretora de criptomoedas que tem o intuito de facilitar transações através de
+            uma interface robusta, simples e intuitiva que convida desde entusiastas até operadores mais exigentes.
+            Deixe toda as burocracias e partes complicadas para nós! Na Foxcoin você vai:</p>
+          <ul>
+            <li>Comprar e vender Bitcoins 💰</li>
+            <li>Acompanhar as últimas novidades do mercado de criptoativos 📰</li>
+            <li>Participar de uma comunidade ativa e que cresce todos os dias 👧</li>
+            <li>Ficar rico e comprar um Playstation 5 🎮</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          <h2>Nosso time</h2>
+          <p class="lead">A Foxcoin entende o valor de se manter uma boa equipe alinhada e satisfeita</p>
+
+          <!-- Grid row -->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-lg-3 col-md-5 ml-5">
+              <div class="avatar mx-auto">
+                <img src="./base/img/team_keran.jpg" width="250" height="250" class="rounded-circle z-depth-1"
+                  alt="Sample avatar">
+              </div>
+              <h5 class="font-weight-bold mt-4 mb-3">Keran Barbieri</h5>
+              <p class="text-uppercase blue-text"><strong>Project Manager</strong></p>
+              <p class="grey-text">Diagrama nunca é demais.</p>
+              <ul class="list-unstyled mb-0">
+                <!-- Facebook -->
+                <a class="p-2 fa-lg fb-ic">
+                  <i class="fab fa-facebook-f blue-text"> </i>
+                </a>
+                <!-- Github -->
+                <a class="p-2 fa-lg ins-ic">
+                  <i class="fab fa-github blue-text"> </i>
+                </a>
+              </ul>
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-lg-3 col-md-5 mb-md-0 mb-5 ml-5">
+              <div class="avatar mx-auto">
+                <img src="./base/img/team_leo.jpg" class="team-pic rounded-circle z-depth-1"
+                  alt="Sample avatar">
+              </div>
+              <h5 class="font-weight-bold mt-4 mb-3">Leonardo Vasques</h5>
+              <p class="text-uppercase blue-text"><strong>Fullstack Developer</strong></p>
+              <p class="grey-text">A vingança nunca é plena, mata a alma e a envenena.</p>
+              <ul class="list-unstyled mb-0">
+                <!-- Facebook -->
+                <a class="p-2 fa-lg fb-ic">
+                  <i class="fab fa-facebook-f blue-text"> </i>
+                </a>
+                <!-- Instagram -->
+                <a class="p-2 fa-lg ins-ic">
+                  <i class="fab fa-instagram blue-text"> </i>
+                </a>
+                <!-- Dribbble -->
+                <a class="p-2 fa-lg ins-ic">
+                  <i class="fab fa-dribbble blue-text"> </i>
+                </a>
+              </ul>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-3 col-md-5 mb-lg-0 mb-5 ml-5">
+              <div class="avatar mx-auto">
+                <img src="./base/img/team_reynaldo.jpg" class="team-pic rounded-circle z-depth-1"
+                  alt="Sample avatar">
+              </div>
+              <h5 class="font-weight-bold mt-4 mb-3">Reynaldo Miquelino</h5>
+              <p class="text-uppercase blue-text"><strong>Android developer</strong></p>
+              <p class="grey-text">Dale.</p>
+              <ul class="list-unstyled mb-0">
+                <!-- Facebook -->
+                <a class="p-2 fa-lg fb-ic">
+                  <i class="fab fa-facebook-f blue-text"> </i>
+                </a>
+                <!-- Instagram -->
+                <a class="p-2 fa-lg ins-ic">
+                  <i class="fab fa-instagram blue-text"> </i>
+                </a>
+              </ul>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-3 col-md-5 mb-lg-0 mb-5 ml-5">
+              <div class="avatar mx-auto">
+                <img src="./base/img/team_rapha.jpg" class="team-pic rounded-circle z-depth-1"
+                  alt="Sample avatar">
+              </div>
+              <h5 class="font-weight-bold mt-4 mb-3">Raphael Martins</h5>
+              <p class="text-uppercase blue-text"><strong>Web developer</strong></p>
+              <p class="grey-text">Pau no gato</p>
+              <ul class="list-unstyled mb-0">
+                <!-- Facebook -->
+                <a class="p-2 fa-lg fb-ic">
+                  <i class="fab fa-facebook-f blue-text"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="p-2 fa-lg tw-ic">
+                  <i class="fab fa-twitter blue-text"> </i>
+                </a>
+                <!-- Instagram -->
+                <a class="p-2 fa-lg ins-ic">
+                  <i class="fab fa-instagram blue-text"> </i>
+                </a>
+              </ul>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-3 col-md-5 mb-lg-0 mb-5 ml-5">
+              <div class="avatar mx-auto">
+                <img src="./base/img/team_vinicius.jpg" class="team-pic rounded-circle z-depth-1"
+                  alt="Sample avatar">
+              </div>
+              <h5 class="font-weight-bold mt-4 mb-3">Vinicius Ribeiro</h5>
+              <p class="text-uppercase blue-text"><strong>UX/UI Specialist</strong></p>
+              <p class="grey-text">Bom dia</p>
+              <ul class="list-unstyled mb-0">
+                <!-- Facebook -->
+                <a class="p-2 fa-lg fb-ic">
+                  <i class="fab fa-facebook-f blue-text"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="p-2 fa-lg tw-ic">
+                  <i class="fab fa-twitter blue-text"> </i>
+                </a>
+                <!-- Instagram -->
+                <a class="p-2 fa-lg ins-ic">
+                  <i class="fab fa-instagram blue-text"> </i>
+                </a>
+              </ul>
+            </div>
+            <!-- Grid column -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Fale com a gente!</h2>
+          <p class="lead">Vem de zap! 📱 Bora participar dos grupos! Trocar mensagens, jogar um CS:Go, LOLzinho brabo.
+            Segue nossos contatos:</p>
+          <ul>
+            <li>+55 (16) 12345-6789 ☎</li>
+            <li>+55 (16) 12345-6789 📞</li>
+            <li>E-mail: <a href="mailto:mimdabitcoin@foxcoin.com">mimdabitcoin@foxcoin.com</a>✉ </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Team FOX 🦊 2020 </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Core da aplicação-->
+  <script src="base/dsi.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="vendor/js/scrolling-nav.js"></script>
+
+</body>
+
+</html>

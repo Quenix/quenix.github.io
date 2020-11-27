@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Registrar Clientes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../base/dsi.css" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body onload="buscarUsuarios()">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/">
+        <img class="brand" src="../base/img/logo.png">
+      </a>
+      <button style="background-color: white !important;" class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li><a class="nav-link mt-2" href="./home-adm.html">Início</a></li>
+          <li><a class="nav-link mt-2" href="./../relatorios/relatorios.html">Relatórios</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="../registrar/registrar.html">
+              <button onclick="logoff()"
+                class="btn btn-dark">Logout</button></a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Menu -->
+  <div class="container">
+    <div class="mt-5 mb-5">
+      <h4 id="saudacao" class="right"></h4>
+    </div>
+    <div class=""></div>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="container">
+    <div class=""></div>
+
+    <div class="">
+
+      <div id="cabecalho" class="row tableHeader">
+        <div class="col-1 center"><strong>ID</strong></div>
+        <div class="col-4 center"><strong>Nome</strong></div>
+        <div class="col-4 center"><strong>Email</strong></div>
+        <div class="col-1 center"><strong>Tipo</strong></div>
+        <div class="col-2 center"><strong>Detalhar</strong></div>
+      </div>
+
+      <div id="gridUsuarios">
+        <!-- Linhas inseridas dinamicamente... -->
+      </div>
+    </div>
+
+    <div class=""></div>
+  </div>
+ <!-- Dialog de Detalhamento de Usuario -->
+ <dialog id="usuarioDialog" class="dialog">
+  <h2 class="center">Dados do cliente</h2>
+  <div class="row">
+    <div class="col-3">
+      Tipo:
+    </div>
+    <div class="col-9">
+      <strong id="dialogTipo">...</strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      Nome:
+    </div>
+    <div class="col-9">
+      <strong id="dialogNome">...</strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      Documento:
+    </div>
+    <div class="col-9">
+      <strong id="dialogDocumento">...</strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      Email:
+    </div>
+    <div class="col-9">
+      <strong id="dialogEmail">...</strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      Telefone:
+    </div>
+    <div class="col-9">
+      <strong id="dialogTelefone">...</strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      Interesses:
+    </div>
+    <div class="col-9">
+      <strong id="dialogInteresses">...</strong>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12">
+      <button id="dialogBtnFechar" class="outlined btn btn-info" autofocus>Fechar</button>
+      <button id="dialogBtnDesBloquear" class="btn btn-dark"></button>
+    </div>
+  </div>
+</dialog>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark footer">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Team FOX 🦊 2020 </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="../vendor/js/scrolling-nav.js"></script>
+
+    <!-- Levando em conta boas práticas e performance, estamos importando nossos scripts no fim do Body -->
+    <script src="../base/dsi.js"></script>
+    <script src="home-adm.js"></script>
+</body>
+
+</html>

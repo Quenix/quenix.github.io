@@ -1,0 +1,61 @@
+.brand {
+    width: 70px;
+    height: 70px;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+  }
+
+.dialog {
+    min-width: 500px;
+}
+
+.tableHeader {
+    background-color: orangered;
+    color: white;
+    font-size: large;
+}
+
+.row-odd {
+    background-color: rgb(247 236 236);
+}
+
+.row-pair {
+    background-color:  rgb(255, 255, 255);
+}
+.team-pic {
+    width: 250px;
+    height: 250px;
+}
+
+div.row-blocked > div {
+    text-decoration: line-through;
+}
+
+
+.outlined {
+    background-color: white;
+    border: 1px solid;
+    border-color: #303F9F;
+    color: #303F9F;
+}
+
+.outlined:hover {
+    background-color: rgb(218, 233, 255);
+}
+
+.inputInteresses input {
+    margin-right: 2px;
+}
+
+.inputInteresses label {
+    margin-right: 15px;
+}
+
+.inputInteresses {
+    font-size: large;
+}
