@@ -2,7 +2,7 @@ let usuarioLocal = buscarJsonLocalmente(KEY_USUARIO);
 
 async function inicializar() {
     if (usuarioLocal) {
-        const response = await fetch(`http://127.0.0.1:8080/api/usuarios/${usuarioLocal.id}`, {
+        const response = await fetch(`https://calm-bayou-80206.herokuapp.com/api/usuarios/${usuarioLocal.id}`, {
             method: 'GET',
             headers: { 
                 'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ async function salvar() {
             }
         });
         // Consome a API (rodando localmente) para a alteração do usuario logado.
-        const response = await fetch(`http://127.0.0.1:8080/api/usuarios/${usuarioLocal.id}`, {
+        const response = await fetch(`https://calm-bayou-80206.herokuapp.com/api/usuarios/${usuarioLocal.id}`, {
             method: 'PUT',
             headers: { 
                 'Content-Type': 'application/json',

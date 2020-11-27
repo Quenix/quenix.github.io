@@ -11,7 +11,7 @@ async function inicializar() {
 }
 
 async function relatorioTodosUsuarios() {
-    const response = await fetch('http://127.0.0.1:8080/api/relatorios/usuarios', {
+    const response = await fetch('https://calm-bayou-80206.herokuapp.com/api/relatorios/usuarios', {
         method: 'GET',
         headers: { 'Authorization': buscarLocalmente(KEY_TOKEN) }
     });
@@ -30,7 +30,7 @@ async function relatorioUsuariosPorInteresses() {
         }
     });
     const queryString = `interesses=${interesses}`;
-    const response = await fetch(`http://127.0.0.1:8080/api/relatorios/usuarios/interesses?${queryString}`, {
+    const response = await fetch(`https://calm-bayou-80206.herokuapp.com/api/relatorios/usuarios/interesses?${queryString}`, {
         method: 'GET',
         headers: { 'Authorization': buscarLocalmente(KEY_TOKEN) }
     });

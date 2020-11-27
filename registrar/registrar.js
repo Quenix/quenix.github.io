@@ -23,7 +23,7 @@ async function registrar() {
     cliente.tipo = radioPf.checked ? radioPf.value : radioPj.value;
 
     // Consome a API (rodando localmente) para a inclusão do Usuário/Cliente
-    const response = await fetch('http://127.0.0.1:8080/api/usuarios', {
+    const response = await fetch('https://calm-bayou-80206.herokuapp.com/api/usuarios', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(cliente)

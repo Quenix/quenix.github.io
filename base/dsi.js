@@ -57,7 +57,7 @@ function gerarTokenBasicAuth(email, senha) {
 
 // Função comum às telas de Home (PF e PJ) e Relatórios.
 async function criarInteresses(idContainer, usuarioLocal) {
-  const response = await fetch('http://127.0.0.1:8080/api/interesses', {
+  const response = await fetch('https://calm-bayou-80206.herokuapp.com/api/interesses', {
     method: 'GET',
     headers: { 'Authorization': buscarLocalmente(KEY_TOKEN) }
   });

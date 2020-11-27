@@ -5,7 +5,7 @@ async function buscarUsuarios() {
         try {
             getById('saudacao').innerHTML = `Bem vindo(a), ${usuarioLogado.nome} (Conta ${usuarioLogado.tipo})`;
     
-            const response = await fetch('http://127.0.0.1:8080/api/usuarios', {
+            const response = await fetch('https://calm-bayou-80206.herokuapp.com/api/usuarios', {
                 method: 'GET',
                 headers: { 'Authorization': buscarLocalmente(KEY_TOKEN) }
             });
@@ -90,7 +90,7 @@ function visualizarusuario(usuario) {
 
 async function bloquearUsuario(usuario) {
     try {
-        const response = await fetch(`http://127.0.0.1:8080/api/usuarios/${usuario.id}`, {
+        const response = await fetch(`https://calm-bayou-80206.herokuapp.com/api/usuarios/${usuario.id}`, {
             method: 'PATCH',
             headers: { 'Authorization': buscarLocalmente(KEY_TOKEN) }
         });
