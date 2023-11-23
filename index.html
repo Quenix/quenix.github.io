@@ -7,32 +7,45 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
             margin: 0;
             background-color: #ffffff; /* Set background color to white */
-            background-image: url('./background.png'); /* Add your floral background image */
+            background-image: url('./background.jpg'); /* Add your floral background image */
             background-repeat: repeat; /* Repeat the background image */
             background-size: cover; /* Cover the entire background */
         }
 
-        #counter {
+        .counter {
             font-size: 3em;
             text-align: center;
             margin: 10px;
+            text-shadow: 1px 1px 4px #000000;
+            color: white;
+        }
+
+        .name {
+            max-width: 75%;
         }
 
         @media (max-width: 600px) {
-            #counter {
+            .counter {
                 font-size: 2.5em;
+            }
+
+            .name {
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <div id="counter"></div>
+    
+    <div id="name" class="counter"><img class="name" src="./name.png"></div>
+    <div id="counter" class="counter"></div>
 
     <script>
         const startDate = new Date('2023-08-28');
@@ -48,7 +61,7 @@
             const diffWeeks = Math.floor(diffDays / 7);
             const remainingDays = diffDays % 7;
 
-            return `Maria Eduarda tem ${diffWeeks} semanas e ${remainingDays} dias de vida 🥰👶`;
+            return `${diffWeeks} semanas e ${remainingDays} dias 🥰👶`;
         }
 
         // Generate dates between two dates
